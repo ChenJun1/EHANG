@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_ffffff"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_head_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color_ffffff"
+        android:paddingBottom="@dimen/dimen_15"
+        android:paddingTop="@dimen/dimen_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:text="提货时间"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/dimen_14"/>
+
+        <TextView
+            android:id="@+id/arrived_car_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:text="2016-07-04 22:31:13"
+            android:textColor="@color/color_000000"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="#e4e4e4"></View>
+    <LinearLayout
+        android:layout_marginTop="@dimen/dimen_15"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:text="提货照片"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/dimen_14"/>
+    <LinearLayout
+        android:layout_marginLeft="@dimen/dimen_13"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/color_ffffff">
+
+        <ImageView
+            android:id="@+id/imag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sign_photomo"
+            android:visibility="gone"/>
+
+        <GridView
+            android:id="@+id/noScrollgridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fafafa"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_41"
+            android:layout_marginLeft="@dimen/dimen_24"
+            android:layout_marginRight="@dimen/dimen_24"
+            android:background="@drawable/login_btn_selector"
+            android:gravity="center"
+            android:text="确 认 提 货"
+            android:textColor="@color/color_ffffff"/>
+
+    </LinearLayout>
+</LinearLayout>

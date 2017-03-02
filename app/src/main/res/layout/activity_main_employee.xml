@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg">
+
+    <FrameLayout
+        android:id="@+id/container_flayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menu_llayout"
+        android:background="#00ffffff"/>
+
+    <LinearLayout
+        android:id="@+id/menu_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3C3540">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#352E36"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 首页 -->
+
+            <RadioButton
+                android:id="@+id/homepage_rb"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/selector_main_navi_icon_home"
+                android:text="@string/cargo_home_name"
+                android:textColor="@color/selector_color_main_navi_txt"/>
+            <!-- 通讯录 -->
+
+            <RadioButton
+                android:id="@+id/addressbook_rb"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/selector_main_navi_icon_addressbook"
+                android:text="通讯录"
+                android:textColor="@color/selector_color_main_navi_txt"/>
+            <!-- 我的 -->
+
+            <RadioButton
+                android:id="@+id/me_rb"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/selector_main_navi_icon_me"
+                android:text="@string/cargo_me_name"
+                android:textColor="@color/selector_color_main_navi_txt"/>
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

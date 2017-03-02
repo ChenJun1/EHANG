@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/top_bar_title_bg_color"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:paddingRight="@dimen/dimen_15">
+
+        <LinearLayout
+            android:id="@+id/back_llayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingLeft="@dimen/dimen_15">
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/record_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/map_unselect"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_23"
+                android:paddingRight="@dimen/dimen_23"
+                android:paddingTop="@dimen/dimen_5"
+                android:text="记录分析"
+                android:textColor="#3A95E7" />
+
+            <TextView
+                android:id="@+id/map_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/record_select"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_23"
+                android:paddingRight="@dimen/dimen_23"
+                android:paddingTop="@dimen/dimen_5"
+                android:text="轨迹地图"
+                android:textColor="@color/color_ffffff" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_btn_bg_color"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingTop="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近一天"
+            android:textColor="@color/color_000000" />
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/home_top_bar_search" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <com.cvnavi.logistics.i51ehang.app.widget.view.CustomViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.cvnavi.logistics.i51ehang.app.widget.view.CustomViewPager>
+
+
+</LinearLayout>

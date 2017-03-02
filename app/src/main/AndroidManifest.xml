@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.cvnavi.logistics.i51ehang.app">
+    //======================================极光推送====================================
+
+    <!-- Required -->
+    <permission
+        android:name="com.cvnavi.logistics.i51ehang.app.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <!-- Required -->
+    <uses-permission android:name="com.cvnavi.logistics.i51ehang.app.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    //======================================end====================================
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    //=================================end============================================
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/i51yun"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name=".activity.launch.LaunchActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <activity android:name=".activity.driver.home.myFleet.MyFleetActivity"> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        //=========================================公用=============================================
+        <activity
+            android:name=".activity.guid.GuidViewPagerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.home.scanning.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!-- <activity -->
+        <!-- android:name=".activity.driver.home.scanning.ScanningActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateAlwaysHidden"/> -->
+
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/my_select_ac"/>
+
+        <!-- 帮助手册页 -->
+        <activity
+            android:name=".HelpActivity"
+            android:screenOrientation="portrait"/>
+        //=========================================end==============================================
+
+        //=========================================货主=============================================
+        <activity
+            android:name=".activity.cargo.CargoMainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cargo.home.myorder.MyOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.home.queryorder.DriverHomeOrderDeatilActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cargo.home.myorder.MyOrderDetailAcitivity"
+            android:screenOrientation="portrait"/>
+        <!-- 历史货单 -->
+        <activity
+            android:name=".activity.cargo.home.myorder.HistoryOrdersActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 未完成货单 -->
+        <activity
+            android:name=".activity.cargo.home.unfinlshedorder.UnfinishedOrdersActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 我的钱包 -->
+        <activity
+            android:name=".activity.cargo.home.mymoney.MyMoneyActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 取货记录 -->
+        <activity
+            android:name=".activity.cargo.home.pickuprcord.CargoPickUpRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 物流跟踪设置 -->
+        <activity
+            android:name=".activity.cargo.me.CargoSettingsActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 上门取货 -->
+        <activity
+            android:name=".activity.cargo.home.pickupthedoor.CargoPickUpTheDoorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 取货地址 -->
+        <activity
+            android:name=".activity.cargo.home.pickuprcord.CargoLocationMapActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 消息中心 -->
+        <activity
+            android:name=".activity.cargo.home.message.CargoMessageActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 通知详情 -->
+        <activity
+            android:name=".activity.cargo.home.message.CargoMsgDetailActivity"
+            android:screenOrientation="portrait"/>
+        //=========================================end==============================================
+
+        //=========================================司机=============================================
+        <activity
+            android:name=".activity.driver.DriverMainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        //物流跟踪
+        <activity
+            android:name=".activity.driver.home.myorder.DriverMyOrderLogisticsFollowActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- //车辆异常 -->
+        <activity
+            android:name=".activity.driver.home.myorder.DriverCarExceptionUpLoadActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.home.location.DriverCarTreeListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.home.transportation.DriverCarSchedulingSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.home.queryorder.DriverQueryOrderActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 查看异常信息 -->
+        <activity
+            android:name=".activity.driver.home.myorder.DriverExceptionInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 轨迹地图 -->
+        <activity
+            android:name=".activity.driver.home.transportation.DriverAddActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.home.transportation.DriverEditActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 添加车辆排班 -->
+        <activity
+            android:name=".activity.driver.home.transportation.DriverAddCarSchedulingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 里程统计详情 -->
+        <activity
+            android:name=".activity.driver.home.statistics.DriverMileageSearchDeatilActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- 编辑车辆排班 -->
+        <activity
+            android:name=".activity.driver.home.transportation.DriverEditCarSchedulingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- 司机管理 -->
+        <activity
+            android:name=".activity.driver.home.transportation.DriverManagerActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 选择司机 -->
+        <activity
+            android:name=".activity.driver.home.transportation.ChoiceDriverActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 选择线路 -->
+        <activity
+            android:name=".activity.driver.home.transportation.ChoiceLineActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 车辆排班列表 -->
+        <activity
+            android:name=".activity.driver.home.location.DriverTransportationListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"/>
+
+        <!-- ===============================================我的任务========================================================= -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 配载详情 -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskCarryDetailedActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 派车详细 -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskDetailedActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 路线跟踪 -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskLineFollowActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 查看照片 -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskLookPicActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 确认到车 -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskConfirmCarActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 确认到车 节点选择 -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskChoicesNoteActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 上传照片 -->
+        <activity
+            android:name=".activity.driver.home.queryorder.DriverUploadPhotoActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 预览照片 -->
+        <activity android:name=".activity.driver.driverce.activity.preview.PreviewPicPagerActivity"/>
+
+        <!-- 确认签收 -->
+        <activity
+            android:name=".activity.driver.home.myorder.SignOrderActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 确认提货 -->
+        <activity
+            android:name=".activity.driver.home.mytask.MyTaskConfirmPickUpGoodsActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 车辆异常图片查询 -->
+        <activity
+            android:name=".activity.driver.home.mytask.exception.MyTaskExceptionInfoActivity"
+            android:screenOrientation="portrait"/>
+        <!-- ==============================================end============================================ -->
+
+
+        <!-- &lt;!&ndash;我的车队&ndash;&gt; -->
+        <activity
+            android:name=".activity.driver.home.myFleet.MyFleetActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"/>
+        <!-- 记录分析 -->
+        <activity
+            android:name=".activity.driver.home.myFleet.MyFleetRecordActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 我的车队 -->
+        <activity
+            android:name=".activity.driver.home.myFleet.fleetalarminfo.MyFleetAlarmInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 我的车队 -->
+        <activity
+            android:name=".activity.driver.home.myFleet.fleetmonitor.MyFleetMonitorMapActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 我的车队 -->
+        <activity
+            android:name=".activity.driver.home.myFleet.MyFleetCarStatusExplainActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 车队里程统计 -->
+        <activity
+            android:name=".activity.driver.home.myFleet.MyFleetMileStatisticActivity"
+            android:screenOrientation="portrait"/>
+        //=========================================end==============================================
+
+        //=========================================员工=============================================
+        <activity
+            android:name=".activity.employee.home.storehouse.StoreSelectOrgActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.storehouse.StockDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.car.CarMonitorSelectCarActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.sendcars.SendCarsStatics"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.sendcars.SendCarDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.weituo.WeiTuoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.weituo.WeituoDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.weituo.WeiTuoStatisticDetail"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.caiwu.CaiWuActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.sendcars.SendCarItemActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.caiwu.CaiWuDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.statics.ArriveCarMonitorActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 库存 -->
+        <activity
+            android:name=".activity.employee.home.storehouse.StockActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 库房 -->
+        <activity
+            android:name=".activity.employee.home.storehouse.StoreHouseActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 我的信息 -->
+        <activity
+            android:name=".activity.employee.me.MyInfoActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 选择公司界面 -->
+
+        <activity
+            android:name=".activity.login.SelectCompanyActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 常用目的地定位信息 -->
+        <activity
+            android:name=".activity.employee.me.CommonAddressGpsActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 常用目的地 -->
+        <activity
+            android:name=".activity.employee.me.CommonAddressActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 发车监控 -->
+        <activity
+            android:name=".activity.employee.home.statics.SendCarMonitorActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 统计发车统计——发车明细筛选 -->
+        <activity
+            android:name=".activity.employee.home.statics.SendCarDetailSelectActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 统计——货单列表筛选 -->
+        <activity
+            android:name=".activity.employee.home.statics.OrderDetailSelectActivty"
+            android:screenOrientation="portrait"/>
+        <!-- android:theme="@style/my_select_ac" /> -->
+
+        <activity
+            android:name=".activity.employee.me.FeedbackActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.me.ReponseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.me.AboutUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.EmployeeMainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        //基础设置
+        <activity
+            android:name=".activity.employee.home.basesetting.BaseSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"/>
+        <activity
+            android:name=".activity.employee.home.statics.StatisticsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"/>
+
+        <!-- 应付款统计 -->
+        //应付款详情
+        <activity
+            android:name=".activity.driver.home.statistics.DriverAccountsPayableListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 应收款统计 -->
+
+        <!-- 应收款明细 -->
+        <activity
+            android:name=".activity.driver.home.statistics.DriverAccountsReceiveListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 货单统计 -->
+        <activity
+            android:name=".activity.driver.home.statistics.DriverOrderStatisticsActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 货单列表 -->
+        <activity
+            android:name=".activity.driver.home.statistics.DriverOrderListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 配载统计 -->
+        <activity
+            android:name=".activity.driver.home.statistics.DriverStowageStatisticsSummaryActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 配载统计(数据列表) -->
+        <activity
+            android:name=".activity.driver.home.statistics.DriverStowageStatisticsListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 定位信息 -->
+        <activity
+            android:name=".activity.driver.home.myFleet.MyFleetLocationInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 定位信息 -->
+        <activity
+            android:name=".activity.driver.home.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.home.myFleet.MyFleetCarTreeListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 定位信息添加排班 -->
+        <activity
+            android:name=".activity.driver.home.myFleet.myFleetLocation.MyFleetAddSheduing"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".widget.bannerview.BaseWebActivity"/>
+        <activity
+            android:name=".activity.employee.home.gps.EmployeeGpsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"/>
+
+        <!-- 发车详情 -->
+        <activity
+            android:name=".activity.employee.home.transportation.PlanDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- Gps轨迹 -->
+        <activity
+            android:name=".activity.employee.home.gps.EmployeeGpsTrackActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"/>
+        <activity
+            android:name=".activity.employee.home.transportation.CarPlanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.transportation.ChoiceShuttleActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.order.OrderExceptionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.employee.home.order.OrderFollowActivity"
+            android:screenOrientation="portrait"/>
+        //=========================================end==============================================
+
+        <!-- <activity -->
+        <!-- android:name="com.king.photo.activity.ImageGridActivity" -->
+        <!-- android:screenOrientation="portrait" > -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.king.photo.activity.TestPicActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.king.photo.activity.PhotoActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.king.photo.activity.AlbumActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.king.photo.activity.ImageFileActivity"/>
+        <activity android:name="com.king.photo.activity.ShowAllPhotoActivity"/>
+        <activity android:name="com.king.photo.activity.GalleryActivity"/>
+        //=============================Dr==================================================
+        <activity
+            android:name=".activity.driver.driverce.activity.takegoods.DrMyTakeGoods"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.sendgoods.DrMySendGoods"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.sendcar.DrMySendCar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.sendcar.DrSendCarDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.sendcar.DrDressCarDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.Dr_SignOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.DriverOrderDeatilActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.takegoods.Dr_OrderExceptionInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.sendcar.Dr_Car_ExceptionInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.Dr_ConfirmPickUpGoodsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.Dr_MsgActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.Dr_MsgDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.activity.sendcar.DrRoutePlanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.utils.DriverDataChooseActivity"
+            android:screenOrientation="portrait"/>
+
+       // =================================司机  E航V2.3修改===========================================
+        <activity
+            android:name=".activity.driver.driverce.history.activity.Dr_HistorySendCar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.history.activity.Dr_HistorySendGoods"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.driver.driverce.history.activity.Dr_HistoryTakeGoods"
+            android:screenOrientation="portrait"/>
+
+       // ============================================================================================
+        //=========================================第三方===========================================
+        <!-- 正式版 百度地图 key -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="gDszngVfSXczSpTVNM13jdMgoKmCG6Kr"/>
+        <!-- cj -->
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="xv3C89emcUnDBGxkpgPdqut5ek8EUu1n" /> -->
+        <!-- fan 百度地图Key -->
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="Oh2iYkCUF3uWUjIU8HOUQ3vgYEyt4nGi"/> -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+        //=========================================end=============================================
+        //===============================Service===========================
+        //检查异地登陆
+        <service android:name=".service.MyCheckLoginService"/>
+        <service
+            android:name=".service.DownAPKService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.UpdateSoftService"/>
+            </intent-filter>
+        </service>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        //+++++++++++++++++++++++++++++++++++++++极光推送++++++++++++++++++++++++++++++++++++++++++++
+        <activity android:name=".jpush.TestJPushActivity"/>
+        <activity
+            android:name=".jpush.TestActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
+        <!-- 如：android:process=":remote" -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService"/>
+
+                <category android:name="com.cvnavi.logistics.i51ehang.app"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+
+                <category android:name="com.cvnavi.logistics.i51ehang.app"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.cvnavi.logistics.i51ehang.app"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"/>
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+
+                <category android:name="com.cvnavi.logistics.i51ehang.app"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default"/>
+
+        <!-- 将AppKey替换为在Portal上注册该应用的的Key -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="47afb95f0a10804609a43aaa"/>
+        //+++++++++++++++++++++++++++++++++++++++end++++++++++++++++++++++++++++++++++++++++++++++++
+        <activity android:name=".activity.employee.test.MyTestActivity"/>
+        <activity android:name=".activity.employee.home.statics.SendCarMonitorDetailActivity"/>
+        <activity android:name=".activity.employee.home.AddSendCarPlanSelectOrgActivity"/>
+        <activity android:name=".activity.employee.home.statics.SendCarMonitorSelectActivity"></activity>
+
+    </application>
+
+</manifest>

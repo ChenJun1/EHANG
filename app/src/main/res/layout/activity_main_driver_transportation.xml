@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_head_back"></include>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/last_day_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/last_day_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="待发车" />
+
+            <View
+                android:id="@+id/last_day_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3"
+                android:layout_alignParentBottom="true"
+                android:background="#218ad5"></View>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="43dp"
+            android:layout_centerVertical="true"
+            android:background="#d5d5d5"></View>
+
+        <RelativeLayout
+            android:id="@+id/today_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/todaytv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已发车" />
+
+            <View
+                android:id="@+id/today_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3"
+                android:layout_alignParentBottom="true"
+                android:background="#218ad5"
+                android:visibility="invisible"></View>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="43dp"
+            android:background="#d5d5d5"></View>
+
+        <RelativeLayout
+            android:id="@+id/tomorrow_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tomo_day_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已完成" />
+
+            <View
+                android:id="@+id/tomorrow_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3"
+                android:layout_alignParentBottom="true"
+                android:background="#218ad5"
+                android:visibility="invisible"></View>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="43dp"
+            android:background="#d5d5d5"></View>
+
+        <RelativeLayout
+            android:id="@+id/all_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/all_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="全部" />
+
+            <View
+                android:id="@+id/all_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3"
+                android:layout_alignParentBottom="true"
+                android:background="#218ad5"
+                android:visibility="invisible"></View>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_list_view_line"
+
+        ></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_5"
+        android:background="#dedede"
+
+        ></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_list_view_line"></View>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

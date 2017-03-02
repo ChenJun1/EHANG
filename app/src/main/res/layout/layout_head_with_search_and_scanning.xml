@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_ll"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#19000000"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_25">
+
+    <LinearLayout
+        android:id="@+id/bg_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dimen_5">
+
+        <LinearLayout
+            android:id="@+id/back_llayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_8"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_weight="10"
+            android:background="@drawable/home_edit_bg">
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:src="@drawable/home_top_bar_search" />
+
+            <EditText
+                android:id="@+id/scanning_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:focusableInTouchMode="false"
+                android:hint="@string/please_enter_search_num"
+                android:maxLength="6"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/color_ffffff"
+
+                android:textCursorDrawable="@drawable/edit_curor"
+                android:textSize="@dimen/dimen_13" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/scan_QR_img"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_top_bar_scanning" />
+
+        <TextView
+            android:id="@+id/right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:text="搜索"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen_17"
+            android:visibility="gone" />
+        />
+
+
+    </LinearLayout>
+
+</LinearLayout>

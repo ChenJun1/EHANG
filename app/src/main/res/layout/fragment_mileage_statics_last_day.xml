@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAFAFA"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_F3F3F3"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingRight="@dimen/dimen_18">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:text="@string/historical_track_statistics_time"
+                android:textColor="@color/color_000000" />
+
+            <EditText
+                android:id="@+id/CarStartTime_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:focusable="false"
+                android:hint="2016/05/25"
+                android:textColor="@color/color_A0A0A0"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_F3F3F3"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingRight="@dimen/dimen_18">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="right|center"
+                android:paddingRight="@dimen/dimen_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/historical_track_to"
+                    android:textColor="@color/color_000000" />
+
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/CarEndTime_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:focusable="false"
+                android:hint="2016/05/25"
+                android:textColor="@color/color_A0A0A0"
+                android:textSize="@dimen/font_13" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_F3F3F3"></View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingRight="@dimen/dimen_18">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical|right"
+                android:paddingRight="@dimen/dimen_15"
+                android:text="@string/historical_track_car_license_num"
+                android:textColor="@color/color_000000" />
+
+            <EditText
+                android:id="@+id/ChooseCar_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:focusable="false"
+                android:hint="@string/historical_track_choose"
+                android:textColorHint="@color/color_A0A0A0"
+                android:textColor="@color/color_A0A0A0"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_F3F3F3"></View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/dimen_40"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/query_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_41"
+            android:layout_marginLeft="@dimen/dimen_24"
+            android:layout_marginRight="@dimen/dimen_24"
+            android:background="@drawable/shape_rounded_btn_ee852c_3"
+            android:text="@string/historical_track_query"
+            android:textColor="@color/color_ffffff" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_head_back"></include>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/off_the_stocks_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_44"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/off_the_stocks_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color_218ad5"
+                android:text="@string/off_the_stocks" />
+
+            <View
+                android:id="@+id/off_the_stocks_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_218ad5"></View>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_d5d5d5"></View>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/dimen_43"
+            android:background="@color/color_d5d5d5"></View>
+
+
+        <RelativeLayout
+            android:id="@+id/total_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_44"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/total_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color_232323"
+                android:text="@string/total" />
+
+            <View
+                android:id="@+id/total_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_218ad5"
+                android:visibility="invisible"></View>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_d5d5d5"></View>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/dimen_43"
+            android:background="@color/color_d5d5d5"></View>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

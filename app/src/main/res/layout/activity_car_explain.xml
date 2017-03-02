@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_ffffff"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_head"></include>
+
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="240dp"-->
+    <!--android:background="@color/color_ffffff" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_14"
+        android:paddingTop="@dimen/dimen_23">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signal_interrput_ask"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_17"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:text="1.如果出现信号中断，就是gps没法往外发送信号了"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_15"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:text="2.可能是您的车到了没电话信号的地方，gps无法回传数据"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_15"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:text="3.也可能是gps的电源松动导致gps设备没电了"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_15"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_70"
+        android:visibility="invisible"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question"/>
+
+        <TextView
+            android:id="@+id/contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:text="@string/contact_us"
+            android:textColor="@color/color_459AE8"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/i_know_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_43"
+        android:layout_marginLeft="@dimen/dimen_30"
+        android:layout_marginRight="@dimen/dimen_30"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:background="@color/color_FD9A27"
+        android:text="@string/i_know"
+        android:textColor="@color/color_ffffff"/>
+
+
+</LinearLayout>

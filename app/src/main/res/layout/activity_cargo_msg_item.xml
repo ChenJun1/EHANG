@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cargo_mag_llyout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/cargo_msg_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dimen_20"
+            android:text="货物已装车"
+            android:textColor="@color/color_1E81D1"
+            android:textSize="@dimen/font_15" />
+
+        <TextView
+            android:id="@+id/cargo_msg_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="@dimen/dimen_20"
+            android:text="16-09-10"
+            android:textColor="@color/color_5E5E5E"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/color_list_view_line" />
+
+    <LinearLayout
+        android:id="@+id/msg_one_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_cargo_msg_item_one" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msg_two_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_cargo_msg_item_two" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msg_three_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <include
+
+            layout="@layout/layout_cargo_msg_item_three" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msg_four_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_cargo_mag_item_four" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/color_list_view_line" />
+
+    <RelativeLayout
+        android:id="@+id/look_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/cargo_about_us_ffffff"
+        android:layout_toRightOf="@+id/about_iv"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/detail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cargo_msg_details"
+            android:textColor="@color/color_5E5E5E"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:textSize="@dimen/dimen_15" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/color_list_view_line" />
+
+</LinearLayout>
+
+

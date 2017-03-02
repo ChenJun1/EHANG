@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_15">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15">
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/all"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/shape_send_car_select_all"-->
+            <!--android:paddingBottom="@dimen/dimen_8"-->
+            <!--android:paddingLeft="@dimen/dimen_30"-->
+            <!--android:paddingRight="@dimen/dimen_30"-->
+            <!--android:paddingTop="@dimen/dimen_8"-->
+            <!--android:text="全部"-->
+            <!--android:textColor="#788fb5"-->
+            <!--android:visibility="gone" />-->
+
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_send_car_select_line"
+            android:paddingBottom="@dimen/dimen_8"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_8"
+            android:text="上海分公司——重庆分公司"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_15" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_head" />
+    <include layout="@layout/layout_cargo_map_search" />
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bodle_stytes"
+            android:hint="例：上海" />
+
+
+    </LinearLayout>
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="55dip"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="gone">-->
+
+        <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/searchkey"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="5.37"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginTop="@dimen/dimen_10"-->
+            <!--android:imeOptions="actionSearch"-->
+            <!--android:singleLine="true"-->
+            <!--android:background="@drawable/bodle_stytes"-->
+            <!--android:hint="例：上海市高光路高径支路" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/search"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_marginLeft="@dimen/dimen_10"-->
+            <!--android:layout_marginRight="@dimen/dimen_10"-->
+            <!--android:onClick="searchButtonProcess"-->
+            <!--android:padding="5dip"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="@dimen/dimen_10"-->
+            <!--android:background="@android:color/darker_gray"-->
+            <!--android:text="搜\t索"-->
+            <!--android:textColor="#FFFFFF" />-->
+    <!--</LinearLayout>-->
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dip"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="gone">-->
+
+        <!--<Button-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_weight="12"-->
+            <!--android:onClick="searchButtonProcess"-->
+            <!--android:padding="10dip"-->
+            <!--android:background="@android:color/darker_gray"-->
+            <!--android:text="搜\t索"-->
+            <!--android:textColor="#FFFFFF" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/map_next_data"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="12"-->
+            <!--android:onClick="goToNextPage"-->
+            <!--android:padding="10dip"-->
+            <!--android:text="下一组数据"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:visibility="gone" />-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

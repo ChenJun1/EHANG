@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_head"></include>
+
+    <ScrollView
+        android:id="@+id/sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/go_tv"
+                    android:layout_width="@dimen/dimen_79"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="发车日期"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15" />
+
+
+                <EditText
+                    android:id="@+id/schedule_date_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_toRightOf="@+id/go_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/car_tv"
+                    android:layout_width="@dimen/dimen_79"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_car_scheduling_car"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/choice_car_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/car_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:paddingLeft="@dimen/dimen_15"
+                android:paddingRight="@dimen/dimen_15">
+
+                <TextView
+                    android:id="@+id/type_btn"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/shape_zheng"
+                    android:text="整"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/font_13" />
+
+
+                <EditText
+                    android:id="@+id/car_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/type_btn"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_18" />
+
+                <TextView
+                    android:id="@+id/state_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="未开始"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_18" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30">
+
+                <TextView
+                    android:id="@+id/gua_car_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="挂车号："
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/choice_gua_car_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/gua_car_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30">
+
+                <TextView
+                    android:id="@+id/line_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_car_scheduling_car_route"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/line_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/line_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30">
+
+                <TextView
+                    android:id="@+id/ban_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+
+                    android:text="班次："
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/ban_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/ban_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30">
+
+                <TextView
+                    android:id="@+id/place_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="目的地:"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/place_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/place_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30"
+                android:paddingLeft="@dimen/dimen_16">
+
+                <TextView
+                    android:id="@+id/main_drive_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/add_car_scheduling_car_main"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/main_drive_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_toRightOf="@+id/main_drive_tv"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+
+
+                <EditText
+                    android:id="@+id/phone_num_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/main_drive_et"
+                    android:layout_alignBottom="@+id/main_drive_et"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColor="@color/color_3a95e7"
+                    android:textSize="@dimen/font_14"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/main_tel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_16"
+                android:textColor="@color/send_car_detail_text_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30">
+
+                <TextView
+                    android:id="@+id/assistant_drive_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:text="@string/add_car_scheduling_car_not_main"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/assistant_drive_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_toRightOf="@+id/assistant_drive_tv"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:textColor="@color/send_car_detail_text_color"
+                    android:textSize="@dimen/font_14" />
+
+
+                <EditText
+                    android:id="@+id/un_main_phone_num_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/assistant_drive_et"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColor="@color/color_3a95e7"
+                    android:textSize="@dimen/font_14"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/second_tel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_16"
+                android:textColor="@color/send_car_detail_text_color" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

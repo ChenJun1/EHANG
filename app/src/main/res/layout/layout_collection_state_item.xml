@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/collection_state_btn"
+        android:layout_width="@dimen/dimen_68"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_et_ffffff_5"
+        android:text="已收款"
+        android:textColor="@color/color_5B5B5B"
+        android:textSize="@dimen/font_15" />
+
+</LinearLayout>

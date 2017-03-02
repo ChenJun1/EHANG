@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/help_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_33"
+        android:paddingRight="@dimen/dimen_20"
+        android:background="#f2f2f2"
+        android:paddingTop="@dimen/dimen_33">
+
+        <TextView
+            android:id="@+id/help_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="帮助"
+            android:textColor="@color/color_3A95E7" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#f2f2f2"
+        android:paddingLeft="@dimen/dimen_30"
+        android:paddingBottom="@dimen/dimen_50"
+        android:paddingRight="@dimen/dimen_30"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/login_logo" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_50">
+
+            <com.cvnavi.logistics.i51ehang.app.widget.edittext.EditTextWithDel
+                android:id="@+id/phone_num_et"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2.5"
+                android:background="@drawable/shape_rounded_et_ffffff_6"
+                android:hint="@string/login_phone_num_hint_name"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:padding="@dimen/dimen_10"
+                android:shadowRadius="3.0"
+                android:textCursorDrawable="@drawable/edit_curor"
+                android:textScaleX="1"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pwd_llayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:visibility="visible">
+
+
+            <com.cvnavi.logistics.i51ehang.app.widget.edittext.EditTextWithDel
+                android:id="@+id/pwd_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@drawable/shape_rounded_et_ffffff_6"
+                android:hint="@string/login_pwd_hint_name"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:padding="@dimen/dimen_10"
+                android:shadowRadius="3.0"
+                android:textCursorDrawable="@drawable/edit_curor"
+                android:textScaleX="1"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/verification_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_weight="3"
+                android:background="@drawable/shape_rounded_btn_e0e0e6_3"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dimen_15"
+                android:paddingLeft="@dimen/dimen_13"
+                android:paddingRight="@dimen/dimen_13"
+                android:paddingTop="@dimen/dimen_15"
+                android:text="@string/get_verify_code_name"
+                android:textScaleX="1"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_13" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_70"
+            android:layout_marginLeft="@dimen/dimen_1"
+            android:paddingRight="@dimen/dimen_1"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:background="@drawable/login_btn_selector"
+            android:textSize="@dimen/dimen_17"
+            android:text="@string/confirm_login"
+            android:textColor="@color/color_ffffff" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

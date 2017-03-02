@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fafafa"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_head_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/color_ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingRight="@dimen/dimen_18">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_000000"
+                android:text="@string/edit_driver_info_driver_name" />
+
+            <EditText
+                android:id="@+id/drive_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="@string/not_null_name"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_DDDDDD"></View>
+
+        <LinearLayout
+            android:background="@color/color_ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingRight="@dimen/dimen_18">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:textColor="@color/color_000000"
+                android:gravity="center_vertical"
+                android:text="@string/edit_driver_info_driver_tel_photo_num" />
+
+            <EditText
+                android:id="@+id/driver_tel_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:hint="@string/not_null_name"
+                android:textSize="@dimen/font_13" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_DDDDDD"></View>
+
+        <LinearLayout
+            android:background="@color/color_ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingRight="@dimen/dimen_18">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:textColor="@color/color_000000"
+                android:gravity="center_vertical"
+                android:text="@string/edit_driver_info_driver_license_type" />
+
+            <EditText
+                android:id="@+id/Driver_License_Type_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="@string/not_null_name"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_DDDDDD"></View>
+
+
+        <LinearLayout
+            android:background="@color/color_ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingRight="@dimen/dimen_18">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:textColor="@color/color_000000"
+                android:gravity="center_vertical"
+                android:text="@string/edit_driver_info_driver_id_num" />
+
+            <EditText
+                android:maxLength="18"
+                android:id="@+id/driver_Card_Oid_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="@string/not_null_name"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_DDDDDD"></View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_41"
+            android:layout_marginLeft="@dimen/dimen_24"
+            android:layout_marginRight="@dimen/dimen_24"
+            android:background="@drawable/shape_rounded_btn_ee852c_3"
+            android:text="@string/edit_driver_info_driver_save"
+            style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/color_ffffff" />
+
+    </LinearLayout>
+</LinearLayout>

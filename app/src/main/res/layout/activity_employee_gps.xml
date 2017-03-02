@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60"
+        android:background="@color/top_bar_title_bg_color"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_25">
+
+        <LinearLayout
+            android:id="@+id/bg_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dimen_5">
+
+            <LinearLayout
+                android:id="@+id/back_llayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingBottom="@dimen/dimen_4"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_5"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:background="@drawable/home_edit_bg">
+
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="9dp"
+                    android:src="@drawable/home_top_bar_search" />
+
+                <TextView
+                    android:id="@+id/scanning_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="选择车辆"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/dimen_13" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:text="地图"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dimen_17"
+                android:visibility="visible" />
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--历史记录查询界面-->
+
+    <LinearLayout
+        android:id="@+id/history_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/query_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_10"
+            android:paddingLeft="@dimen/dimen_15"
+            android:background="@color/color_ffffff"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_10">
+
+            <TextView
+                android:id="@+id/history_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="历史记录（最近10条记录）"
+                android:textColor="#000000"
+                android:textSize="@dimen/font_13" />
+
+            <TextView
+                android:id="@+id/clear_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="清空"
+                android:textColor="#3d96e7"
+                android:textSize="@dimen/font_13" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dadada"></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/history_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_ffffff"
+            android:paddingLeft="@dimen/dimen_5"
+            android:paddingRight="@dimen/dimen_5">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <!--Gps信息详情-->
+    <RelativeLayout
+        android:id="@+id/gps_location_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.cvnavi.logistics.i51ehang.app.widget.myscrollview.MyScrollView
+            android:id="@+id/all_sl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen_16"
+                    android:paddingRight="@dimen/dimen_16">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/dimen_18"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="今日行驶里程"
+                            android:textColor="#777777" />
+
+                        <TextView
+                            android:id="@+id/mile_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="88"
+                            android:textColor="#3993E6"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="公里"
+                            android:textColor="#777777" />
+
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+                <!--  定位信息 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#E6E6E6"></View>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FAFAFA"
+                        android:paddingBottom="@dimen/dimen_6"
+                        android:paddingLeft="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_11">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="定位信息"
+                            android:textColor="#8B8B8B" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#E6E6E6"></View>
+
+
+                    <RelativeLayout
+                        android:id="@+id/location_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_14"
+                        android:paddingRight="@dimen/dimen_14"
+                        android:paddingTop="@dimen/dimen_10">
+
+
+                        <ImageView
+                            android:id="@+id/location_iv"
+                            android:layout_width="@dimen/dimen_15"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/location_green2" />
+
+                        <TextView
+                            android:id="@+id/location_info_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_9"
+                            android:layout_toRightOf="@+id/location_iv"
+                            android:text=""
+                            android:textColor="@color/color_000000" />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/right" />
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#DEDEDE"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/letter_oid_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_14"
+                        android:paddingRight="@dimen/dimen_14"
+                        android:paddingTop="@dimen/dimen_10">
+
+                        <ImageView
+                            android:id="@+id/doc_iv"
+                            android:layout_width="@dimen/dimen_15"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_alignParentLeft="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/myfleet_doc" />
+
+                        <TextView
+                            android:id="@+id/doc_info_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_9"
+                            android:layout_toRightOf="@+id/doc_iv"
+                            android:text="上海市"
+                            android:textColor="@color/color_000000" />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/right" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#DEDEDE"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/line_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_14"
+                        android:paddingRight="@dimen/dimen_14"
+                        android:paddingTop="@dimen/dimen_10">
+
+                        <ImageView
+                            android:id="@+id/flag_iv"
+                            android:layout_width="@dimen/dimen_15"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_alignParentLeft="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/myfeet_flag" />
+
+                        <TextView
+                            android:id="@+id/flag_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_9"
+                            android:layout_toRightOf="@+id/flag_iv"
+                            android:text="上海市"
+                            android:textColor="@color/color_000000" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/right" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <!--驾驶司机-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#E6E6E6"></View>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FAFAFA"
+                        android:paddingBottom="@dimen/dimen_6"
+                        android:paddingLeft="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_11">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="驾驶司机"
+                            android:textColor="#8B8B8B" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#E6E6E6"></View>
+
+
+                    <RelativeLayout
+                        android:id="@+id/main_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_14"
+                        android:paddingRight="@dimen/dimen_14"
+                        android:paddingTop="@dimen/dimen_10">
+
+
+                        <ImageView
+                            android:id="@+id/main_iv"
+                            android:layout_width="@dimen/dimen_22"
+                            android:layout_height="@dimen/dimen_22"
+                            android:layout_alignParentLeft="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/myfleet_main_driver" />
+
+                        <TextView
+                            android:id="@+id/main_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_9"
+                            android:layout_toRightOf="@+id/main_iv"
+                            android:text="上海市"
+                            android:textColor="@color/color_000000" />
+
+
+                        <TextView
+                            android:id="@+id/main_tel_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="13323232321"
+                            android:textColor="#4C9AE8" />
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#DEDEDE"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/other_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_14"
+                        android:paddingRight="@dimen/dimen_14"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/other_iv"
+                            android:layout_width="@dimen/dimen_22"
+                            android:layout_height="@dimen/dimen_22"
+                            android:layout_alignParentLeft="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/myfleet_other_driver" />
+
+                        <TextView
+                            android:id="@+id/other_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_9"
+                            android:layout_toRightOf="@+id/other_iv"
+                            android:text="上海市"
+                            android:textColor="@color/color_000000" />
+
+
+                        <TextView
+                            android:id="@+id/other_tel_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="13111111111"
+                            android:textColor="#4C9AE8" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/empty_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#DEDEDE"></View>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_100"
+                        android:background="#FAFAFA"></View>
+                </LinearLayout>
+
+
+                <!-- 排版信息-->
+                <LinearLayout
+                    android:id="@+id/schedu_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dimen_75"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#E6E6E6"></View>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FAFAFA"
+                        android:paddingBottom="@dimen/dimen_6"
+                        android:paddingLeft="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_11">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="排班信息"
+                            android:textColor="#8B8B8B" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#E6E6E6"></View>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_15"
+                        android:paddingRight="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_11">
+
+                        <TextView
+                            android:id="@+id/schedu_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="预计发车"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/dimen_16" />
+
+                        <TextView
+                            android:id="@+id/BoxCarCode_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_9"
+                            android:text="挂车："
+                            android:textSize="@dimen/dimen_16" />
+
+                        <TextView
+                            android:id="@+id/place_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_9"
+                            android:text="上海分公司"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/dimen_16" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.cvnavi.logistics.i51ehang.app.widget.myscrollview.MyScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E6E6E6"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingBottom="@dimen/dimen_12"
+                android:paddingTop="@dimen/dimen_12">
+
+
+                <LinearLayout
+                    android:id="@+id/bj_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_16"
+                        android:layout_height="@dimen/dimen_16"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/myfleet_bell" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:text="当日报警"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lc_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_16"
+                        android:layout_height="@dimen/dimen_16"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/myfleet_lc" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:text="里程统计"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gj_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_16"
+                        android:layout_height="@dimen/dimen_16"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/myfleet_gj" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:text="轨迹查看"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_15" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

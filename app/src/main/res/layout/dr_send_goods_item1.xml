@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/color_ffffff"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_E5E5E5"></View>
+
+
+    <LinearLayout
+        android:id="@+id/item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_14"
+        android:paddingTop="@dimen/dimen_12">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="货单号："
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_14"/>
+
+            <TextView
+                android:id="@+id/All_Ticket_Nol_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="0511013423234"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_14"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    style="@style/MyTextLable"
+                    android:background="@drawable/shape_rounded_tv_f5bb4e_3"
+                    android:gravity="center_vertical"
+                    android:text="始"
+                    />
+
+                <TextView
+                    android:id="@+id/sendCity_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:singleLine="true"
+                    android:text="上海市"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_14"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:text="—"
+                android:textColor="#000000"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    style="@style/MyTextLable"
+                    android:background="@drawable/shape_rounded_tv_8dc15a_3"
+                    android:gravity="center"
+                    android:text="终"
+                    />
+
+                <TextView
+                    android:id="@+id/arriveCity_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:singleLine="true"
+                    android:text="成都市"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_14"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="品名："
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/Goods_Breed_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="服装"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/pack_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:singleLine="true"
+                android:text="--"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/Goods_Num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:singleLine="true"
+                android:text="200件"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:singleLine="true"
+                android:text="/"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/Goods_Weight_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:singleLine="true"
+                android:text="2500kg"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:singleLine="true"
+                android:text="/"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/Bulk_Weight_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:singleLine="true"
+                android:text="30m³"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="送货时间："
+                android:textColor="#4F4F4F"
+                />
+
+            <TextView
+                android:id="@+id/ReceiveMan_Tel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-10-06"
+                android:textColor="#4F4F4F"
+                />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/operation_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/shape_dr_take_goods_btn_2fc561"
+            android:text="确 认 签 收"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_15"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_E5E5E5"></View>
+</LinearLayout>

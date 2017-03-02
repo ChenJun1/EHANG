@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_activity_bg"
+    android:orientation="vertical">
+
+
+    <!--        android:background="@color/top_bar_lv_bg_base"
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--<include layout="@layout/layout_head_back" />-->
+        <include layout="@layout/top_bar_base"></include>
+
+        <include layout="@layout/layout_data_search_head" />
+
+
+        <com.cvnavi.logistics.i51ehang.app.widget.myscrollview.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dimen_30">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="visible" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:paddingBottom="@dimen/dimen_15">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="@dimen/dimen_15">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/send_point" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_8"
+                            android:text="发送"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/dimen_13" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_15"
+                            android:src="@drawable/arrive_point" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_8"
+                            android:text="到达"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/dimen_13" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.cvnavi.logistics.i51ehang.app.widget.gridview.MyGridView
+                        android:id="@+id/myGridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:horizontalSpacing="3dip"
+                        android:listSelector="@drawable/grid_view_selector"
+                        android:numColumns="3"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="3dip"></com.cvnavi.logistics.i51ehang.app.widget.gridview.MyGridView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.cvnavi.logistics.i51ehang.app.widget.myscrollview.MyScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

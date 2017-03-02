@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_78"
+        android:layout_height="@dimen/dimen_76">
+
+        <ImageView
+            android:id="@+id/item_grida_image"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher"></ImageView>
+
+        <Button
+            android:id="@+id/item_grida_bt"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bt_dynamic_del"
+            android:focusable="false" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_head_back"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/sign_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_21"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:text="签收状态"
+                android:textColor="@color/color_000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_15">
+
+                <RadioGroup
+                    android:id="@+id/sign_state_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sign_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_order_detail_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="全部"
+                        android:textColor="@drawable/selector_order_detail_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/un_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_17"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_order_detail_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="未签收"
+                        android:textColor="@drawable/selector_order_detail_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/part_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_17"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_order_detail_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="部分"
+                        android:textColor="@drawable/selector_order_detail_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/has_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_17"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_order_detail_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="已签收"
+                        android:textColor="@drawable/selector_order_detail_text_color"
+                        android:textSize="@dimen/font_14" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dimen_23"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_25">
+
+
+            <TextView
+                android:id="@+id/clear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_41"
+                android:layout_marginLeft="@dimen/dimen_24"
+                android:layout_marginRight="@dimen/dimen_24"
+                android:layout_weight="1"
+                android:background="@drawable/order_detail_clear"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/color_000000" />
+
+            <TextView
+
+                android:id="@+id/sign_ok"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_41"
+                android:layout_marginLeft="@dimen/dimen_24"
+                android:layout_marginRight="@dimen/dimen_24"
+                android:layout_weight="1"
+                android:background="@drawable/shape_order_detail_se"
+                android:gravity="center"
+                android:text="确认"
+                android:textColor="@color/color_ffffff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout"
+            android:layout_below="@+id/sign_ll"
+            android:layout_marginTop="@dimen/dimen_23"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="52dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:text="作废状态"
+                android:textColor="@color/color_000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_15">
+
+                <RadioGroup
+                    android:id="@+id/unuse_state_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/unuse_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_order_detail_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="全部"
+                        android:textColor="@drawable/selector_order_detail_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/unuse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_17"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_order_detail_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="未作废"
+                        android:textColor="@drawable/selector_order_detail_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/has_unuse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_17"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_order_detail_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="已作废"
+                        android:textColor="@drawable/selector_order_detail_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

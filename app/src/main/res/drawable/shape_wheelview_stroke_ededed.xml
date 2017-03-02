@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    	android:angle="90" 颜色渐变方向从下向上
+    	android:angle="0"  颜色渐变方向从左向右
+    	android:angle="45" 颜色渐变方向斜向上
+    -->
+    <solid android:color="@android:color/transparent" />
+    <!-- 描边 -->
+    <stroke
+        android:width="@dimen/dimen_1"
+        android:color="@color/color_EDEDED" />
+
+    <padding
+        android:bottom="@dimen/dimen_15"
+        android:left="@dimen/dimen_2"
+        android:right="@dimen/dimen_2"
+        android:top="@dimen/dimen_15" />
+
+</shape>

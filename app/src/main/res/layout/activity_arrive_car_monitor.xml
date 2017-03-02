@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_activity_bg"
+    android:orientation="vertical">
+
+
+    <!--        android:background="@color/top_bar_lv_bg_base"
+-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/top_bar_base"></include>
+
+
+            <include layout="@layout/layout_data_search_head" />
+
+
+            <FrameLayout
+                android:id="@+id/noData_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <include layout="@layout/no_data_layout"></include>
+
+            </FrameLayout>
+
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null">
+
+
+            </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#4599e1"
+            android:paddingBottom="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_15">
+
+
+            <TextView
+                android:id="@+id/sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="总车辆：0"
+                android:textColor="@color/color_ffffff" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

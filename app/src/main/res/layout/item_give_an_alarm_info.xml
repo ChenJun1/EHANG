@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_8"
+    android:paddingTop="@dimen/dimen_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_15"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dimen_15">
+
+        <TextView
+            android:id="@id/CarCode_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="沪A123232"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_18" />
+
+        <TextView
+            android:id="@+id/Alarm_DateTime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:textColor="@color/color_000000"
+            android:text="2016-04-30 09:09:00" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_6">
+
+
+        <TextView
+            android:id="@+id/Alarm_Description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_50"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:layout_weight="1"
+            android:text="沪A123232;在江苏省》苏州市》昆山市；2312311231231231231231" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/Alarm_Type_Oid_iv"
+                android:layout_width="@dimen/dimen_52"
+                android:layout_height="@dimen/dimen_52"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/warning_chao" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

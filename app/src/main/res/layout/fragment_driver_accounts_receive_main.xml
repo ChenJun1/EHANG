@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_fafafa"
+        android:paddingBottom="@dimen/dimen_23"
+        android:paddingLeft="@dimen/dimen_17"
+        android:paddingRight="@dimen/dimen_17"
+        android:paddingTop="@dimen/dimen_23">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/accounts_payabl_main_total"
+            android:textColor="@color/color_000000" />
+
+        <TextView
+            android:id="@+id/AllTotalFee_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:text="加载中"
+            android:textColor="@color/color_fc9b26"
+            android:textSize="@dimen/font_23" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:text="暂无数据！"
+        android:textColor="@color/color_000000"
+        android:visibility="gone" />
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_lv"
+        android:background="@color/color_ffffff"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

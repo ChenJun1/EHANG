@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_7"
+    android:paddingRight="@dimen/dimen_7"
+    android:paddingTop="@dimen/dimen_15">
+
+    <TextView
+        android:id="@+id/carCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_gps_his_item"
+        android:paddingBottom="@dimen/dimen_6"
+        android:paddingLeft="@dimen/dimen_15"
+        android:gravity="center"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingTop="@dimen/dimen_6"
+        android:text="123123"
+        android:textColor="@color/color_000000" />
+
+</LinearLayout>

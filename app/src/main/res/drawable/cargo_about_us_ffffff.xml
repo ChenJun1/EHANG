@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ripple xmlns:Android="http://schemas.android.com/apk/res/android"
+    Android:color="@color/ripple_material_light">
+    <item>
+        <selector>
+            <item Android:state_pressed="false">
+                <color Android:color="#FFFFFF"/>
+
+            </item>
+        </selector>
+    </item>
+</ripple>

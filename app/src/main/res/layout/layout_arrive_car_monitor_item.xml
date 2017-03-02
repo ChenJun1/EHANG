@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_15"
+    android:paddingRight="@dimen/dimen_15">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/carCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车牌号：123123131"
+                android:textColor="@color/color_ffffff" />
+
+            <TextView
+                android:id="@+id/gua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/carCode"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:visibility="gone"
+                android:textColor="@color/color_ffffff"
+                android:text="挂车" />
+
+
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_pei"
+                android:visibility="invisible"
+                android:text="1" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="线路:"
+            android:textColor="@color/color_ffffff" />
+
+
+        <TextView
+            android:id="@+id/curr_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="当前位置:"
+            android:textColor="@color/color_ffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10">
+
+            <TextView
+                android:id="@+id/last_mile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="剩余历程"
+                android:textColor="@color/color_ffffff" />
+
+            <TextView
+                android:id="@+id/arrive_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="预计7小时"
+                android:textColor="@color/color_ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/send_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="1231231"
+            android:textColor="@color/color_ffffff" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0.5"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/color_list_view_line" />
+</LinearLayout>

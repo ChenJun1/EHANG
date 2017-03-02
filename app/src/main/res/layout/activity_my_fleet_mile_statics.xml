@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_head_back"></include>
+
+        <include layout="@layout/layout_data_search_head" />
+
+    </LinearLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/color_ffffff"-->
+    <!--android:paddingBottom="@dimen/dimen_29"-->
+    <!--android:paddingLeft="@dimen/dimen_20"-->
+    <!--android:paddingRight="@dimen/dimen_20"-->
+    <!--android:paddingTop="@dimen/dimen_18">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/start_hm_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/color_000000"-->
+    <!--android:textSize="@dimen/dimen_20" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/start_md_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="@dimen/dimen_16"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/color_000000"-->
+    <!--android:textSize="@dimen/dimen_14" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/total_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:text="0"-->
+    <!--android:textColor="@color/color_000000" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/dimen_100"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:src="@drawable/my_fleet_back" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/gj_ll"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/dimen_16"-->
+    <!--android:layout_height="@dimen/dimen_16"-->
+    <!--android:src="@drawable/myfleet_gj" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/dimen_5"-->
+    <!--android:text="轨迹查看"-->
+    <!--android:textColor="#5FC343" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/end_hm_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/color_000000"-->
+    <!--android:textSize="@dimen/dimen_20" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/end_md_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="@dimen/dimen_16"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/color_000000"-->
+    <!--android:textSize="@dimen/dimen_14" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_gravity="center_horizontal"
+        android:text="0"
+        android:textColor="@color/color_000000" />
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/bar_chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E4E4"></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_20"
+        android:background="#FAFAFA"></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E4E4"></View>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+
+</LinearLayout>

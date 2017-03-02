@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar_base"></include>
+
+    <include layout="@layout/layout_data_search_head" />
+
+    <com.cvnavi.logistics.i51ehang.app.widget.myscrollview.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dimen_30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_30">
+
+
+            <FrameLayout
+                android:id="@+id/noData_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <include layout="@layout/no_data_layout"></include>
+
+            </FrameLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20">
+
+                <com.cvnavi.logistics.i51ehang.app.widget.gridview.MyGridView
+                    android:id="@+id/myGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:horizontalSpacing="3dip"
+                    android:listSelector="@drawable/grid_view_selector"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="3dip"></com.cvnavi.logistics.i51ehang.app.widget.gridview.MyGridView>
+            </LinearLayout>
+        </LinearLayout>
+    </com.cvnavi.logistics.i51ehang.app.widget.myscrollview.MyScrollView>
+
+</LinearLayout>

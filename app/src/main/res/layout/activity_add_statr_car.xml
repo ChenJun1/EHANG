@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_head"></include>
+
+    <ScrollView
+        android:id="@+id/sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_44">
+
+                <TextView
+                    android:id="@+id/go_tv"
+                    android:layout_width="@dimen/dimen_79"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="发车日期"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/schedule_date_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_toRightOf="@+id/go_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_A0A0A0"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_24"
+                    android:background="@drawable/right"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_44">
+
+                <TextView
+                    android:id="@+id/car_tv"
+                    android:layout_width="@dimen/dimen_79"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_car_scheduling_car"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/choice_car_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_toRightOf="@+id/car_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint="@string/add_car_scheduling_choose_car"
+                    android:textColor="@color/color_A0A0A0"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_24"
+                    android:background="@drawable/right"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_44">
+
+                <TextView
+                    android:id="@+id/gua_car_tv"
+                    android:layout_width="@dimen/dimen_79"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="挂车号"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_15" />
+
+                <EditText
+                    android:id="@+id/choice_gua_car_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_toRightOf="@+id/gua_car_tv"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint="请选择挂车"
+                    android:textColor="@color/color_A0A0A0"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_24"
+                    android:background="@drawable/right"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_44">
+
+                <TextView
+                    android:id="@+id/zheng_tv"
+                    android:layout_width="@dimen/dimen_79"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="是否整车"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_15" />
+
+                <ToggleButton
+                    android:id="@+id/zheng_tb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_toRightOf="@+id/zheng_tv"
+                    android:background="@android:color/transparent"
+                    android:button="@drawable/ios7_btn"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"></View>
+
+            <RelativeLayout
+                android:id="@+id/diy_place"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_44"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/des_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:gravity="center_vertical"
+                    android:text="自定义目的地"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_15" />
+
+
+                <ToggleButton
+                    android:id="@+id/des_tb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_toRightOf="@+id/des_tv"
+                    android:background="@android:color/transparent"
+
+                    android:button="@drawable/ios7_btn"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/route_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#dadada"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_44">
+
+                    <TextView
+                        android:id="@+id/line_tv"
+                        android:layout_width="@dimen/dimen_79"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimen_16"
+                        android:gravity="center_vertical"
+                        android:text="@string/add_car_scheduling_car_route"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_15" />
+
+                    <EditText
+                        android:id="@+id/line_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimen_22"
+                        android:layout_toRightOf="@+id/line_tv"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:hint="@string/add_car_scheduling_choose_route"
+                        android:textColor="@color/color_A0A0A0"
+                        android:textSize="@dimen/font_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_24"
+                        android:background="@drawable/right"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_44">
+
+                    <TextView
+                        android:id="@+id/ban_tv"
+                        android:layout_width="@dimen/dimen_79"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimen_16"
+                        android:gravity="center_vertical"
+                        android:text="@string/add_car_scheduling_car_route"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_15"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_24"
+                        android:background="@drawable/right"
+                        android:gravity="center_vertical"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/ban_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dimen_22"
+                        android:layout_toRightOf="@+id/ban_tv"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:hint="班次"
+                        android:textColor="@color/color_A0A0A0"
+                        android:textSize="@dimen/font_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#dadada"></View>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bottom_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#dadada"></View>
+
+                <RelativeLayout
+                    android:id="@+id/place_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_44"
+                    android:visibility="gone"
+                    android:paddingRight="@dimen/dimen_20">
+
+                    <TextView
+                        android:id="@+id/place_tv"
+                        android:layout_width="@dimen/dimen_79"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimen_16"
+                        android:gravity="center_vertical"
+                        android:text="目的地"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/font_15" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/place_tv">
+
+                        <TextView
+                            android:id="@+id/desc_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/dimen_22"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/color_A0A0A0"
+                            android:textSize="@dimen/font_14" />
+
+
+                        <ImageView
+                            android:id="@+id/choice_desc_iv"
+                            android:layout_width="@dimen/dimen_15"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/location_green1" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_44">
+
+                        <TextView
+                            android:id="@+id/main_drive_tv"
+                            android:layout_width="@dimen/dimen_79"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_16"
+                            android:gravity="center_vertical"
+                            android:text="@string/add_car_scheduling_car_main"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/font_15" />
+
+                        <EditText
+                            android:id="@+id/main_drive_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_22"
+                            android:layout_toRightOf="@+id/main_drive_tv"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="主驾驶"
+                            android:textColor="@color/color_A0A0A0"
+                            android:textSize="@dimen/font_14" />
+
+
+                        <TextView
+                            android:id="@+id/main_choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dimen_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dimen_4"
+                            android:text="+常用司机"
+                            android:textColor="@color/color_000000" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_44">
+
+                        <TextView
+                            android:id="@+id/ReceiveMan_Tel_tv"
+                            android:layout_width="@dimen/dimen_79"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/phone_num_et"
+                            android:layout_marginLeft="@dimen/dimen_16"
+                            android:gravity="center_vertical"
+                            android:text="手机号"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/font_15" />
+
+                        <EditText
+                            android:id="@+id/phone_num_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_22"
+                            android:layout_toRightOf="@+id/ReceiveMan_Tel_tv"
+                            android:background="@null"
+                            android:hint="请输入手机号"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:textColor="@color/color_A0A0A0"
+                            android:textSize="@dimen/font_14" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_44">
+
+                        <TextView
+                            android:id="@+id/assistant_drive_tv"
+                            android:layout_width="@dimen/dimen_79"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_16"
+                            android:gravity="center_vertical"
+                            android:text="@string/add_car_scheduling_car_not_main"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/font_15" />
+
+                        <EditText
+                            android:id="@+id/assistant_drive_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_22"
+                            android:layout_toRightOf="@+id/assistant_drive_tv"
+                            android:background="@null"
+                            android:hint="@string/add_car_scheduling_choose_car_not_main"
+                            android:textColor="@color/color_A0A0A0"
+                            android:textSize="@dimen/font_14" />
+
+
+                        <TextView
+                            android:id="@+id/un_main_choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dimen_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dimen_4"
+                            android:text="+常用司机"
+                            android:textColor="@color/color_000000" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_44">
+
+                        <TextView
+                            android:id="@+id/un_main_tv"
+                            android:layout_width="@dimen/dimen_79"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/un_main_phone_num_et"
+                            android:layout_marginLeft="@dimen/dimen_16"
+                            android:gravity="center_vertical"
+                            android:text="手机号"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/font_15" />
+
+                        <EditText
+                            android:id="@+id/un_main_phone_num_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_22"
+                            android:layout_toRightOf="@+id/un_main_tv"
+                            android:background="@null"
+                            android:hint="请输入手机号"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:textColor="@color/color_A0A0A0"
+                            android:textSize="@dimen/font_14" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_44">
+
+                        <TextView
+                            android:id="@+id/titp_org"
+                            android:layout_width="@dimen/dimen_79"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/org_tv"
+                            android:layout_marginLeft="@dimen/dimen_16"
+                            android:gravity="center_vertical"
+                            android:text="发车机构："
+                            android:textColor="#000000"
+                            android:textSize="@dimen/font_15" />
+
+                        <TextView
+                            android:id="@+id/org_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_22"
+                            android:background="@null"
+                            android:inputType="phone"
+                            android:gravity="center_vertical"
+                            android:maxLength="11"
+                            android:layout_toRightOf="@+id/titp_org"
+                            android:textColor="@color/color_A0A0A0"
+                            android:textSize="@dimen/font_14" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dimen_24"
+                            android:background="@drawable/right"
+                            android:gravity="center_vertical" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dimen_88"
+                        android:paddingLeft="@dimen/dimen_25"
+                        android:paddingRight="@dimen/dimen_25"
+                        android:paddingTop="@dimen/dimen_34">
+
+                        <Button
+                            android:id="@+id/confirm_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_40"
+                            android:background="@drawable/shape_rounded_btn_fd9a27_2"
+                            android:text="@string/add_car_scheduling_sure"
+                            android:textColor="#ffffff" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

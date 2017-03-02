@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/root_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_43"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_15">
+
+
+        <TextView
+            android:id="@+id/line_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_gan"
+            android:paddingLeft="@dimen/dimen_3"
+            android:paddingRight="@dimen/dimen_3"
+            android:paddingBottom="@dimen/dimen_1"
+            android:paddingTop="@dimen/dimen_1"
+            android:text="干"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_12" />
+
+        <TextView
+            android:id="@+id/line_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_28"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/color_000000" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_list_view_line" />
+
+</LinearLayout>

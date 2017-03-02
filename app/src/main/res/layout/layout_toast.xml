@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/progress_dialog_bg"
+    android:padding="15dip"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/tips_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10.0dip"
+        android:gravity="center"
+        android:src="@drawable/toast_succ" />
+
+    <TextView
+        android:id="@+id/tips_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxWidth="@dimen/toast_msg_width"
+        android:gravity="center"
+        android:lineSpacingExtra="3.0dip"
+        android:text="message"
+        android:textColor="@color/toast_progress_dia_color"
+        android:textSize="@dimen/toast_progress_dia_size" />
+
+</LinearLayout>

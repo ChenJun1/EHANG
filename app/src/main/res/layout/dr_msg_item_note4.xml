@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#FFFFFF"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10">
+    <TextView
+        android:id="@+id/context_tv4"
+        android:textColor="#333333"
+        android:textSize="@dimen/font_13"
+        android:ellipsize="end"
+        android:text="设置TextView的宽度为N个字符的宽度。这里测试为一个汉字字符宽度 android:maxEms 设置TextView的宽度为最长为N个字符的宽度。与ems同时使用时覆盖ems选项。 android:minEms 设置TextView的宽度为最短为N个字符的宽度。与ems同时使用时覆盖ems选项。 android:maxLength 限制显示的文本长度，超出部"
+        android:lines="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        </LinearLayout>
+</LinearLayout>

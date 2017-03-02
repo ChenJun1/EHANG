@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_weituo_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cvnavi.logistics.i51ehang.app.activity.employee.home.statics.weituo.WeituoDetailActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_head_back"></include>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top">
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/invis"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/send_car_item_detail_order_bg"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dimen_15"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_15"
+                android:text="货单列表"
+                android:textColor="@color/color_000000" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

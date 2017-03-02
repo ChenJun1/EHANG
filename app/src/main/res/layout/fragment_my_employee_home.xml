@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_50">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/fragment_employee_home_top_bar"></include>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/msg_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30"
+        android:layout_below="@+id/top"
+        android:paddingLeft="@dimen/dimen_30"
+        android:visibility="gone"
+        android:paddingRight="@dimen/dimen_30">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#19ffffff">
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="@dimen/dimen_30"
+                android:background="#62d7c8" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您有"
+                    android:textColor="#62d7c8" />
+
+                <TextView
+                    android:id="@+id/num_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="2条订单"
+                    android:textColor="#ffff00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="需要处理,点击查看!"
+                    android:textColor="#62d7c8" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/clear_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dimen_5"
+                android:text="x"
+                android:textColor="@color/color_ffffff" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/dimen_20"
+        android:paddingTop="@dimen/dimen_20">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/carFleet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llPageSign"
+        android:visibility="invisible"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_20">
+
+        <RelativeLayout
+            android:id="@+id/zaitu_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dimen_20"
+            android:paddingRight="@dimen/dimen_20">
+
+            <TextView
+                android:id="@+id/onWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="#bfbec1" />
+
+            <TextView
+                android:id="@+id/on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/onWay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:text="在途中"
+                android:textColor="#bfbec1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/on"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="#638b27"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plan_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dimen_20"
+            android:paddingRight="@dimen/dimen_20">
+
+            <TextView
+                android:id="@+id/plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="#bfbec1" />
+
+            <TextView
+                android:id="@+id/onPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:text="已计划"
+                android:textColor="#bfbec1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/onPlan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="#6888b7"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/arrive_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dimen_20"
+            android:paddingRight="@dimen/dimen_20">
+
+            <TextView
+                android:id="@+id/arrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="#bfbec1" />
+
+            <TextView
+                android:id="@+id/onArrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/arrive"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:text="将到达"
+                android:textColor="#bfbec1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/onArrive"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="#c80c42"></View>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llPageSign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:gravity="center_horizontal"
+        ></LinearLayout>
+
+
+</RelativeLayout>
+

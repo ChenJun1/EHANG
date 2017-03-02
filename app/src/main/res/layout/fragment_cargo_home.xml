@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <include layout="@layout/layout_head_cargo" />
+    </LinearLayout>
+
+    <!--<com.handmark.pulltorefresh.library.PullToRefreshScrollView-->
+    <!--android:id="@+id/pullToRefresh_sv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical">
+
+        <!-- 广告-->
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+            <com.cvnavi.logistics.i51ehang.app.widget.bannerview.ViewFlow
+                android:id="@+id/viewflow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:padding="3dip">
+
+                <com.cvnavi.logistics.i51ehang.app.widget.bannerview.CircleFlowIndicator
+                    android:id="@+id/viewflowindic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:clipToPadding="true"
+                    android:fitsSystemWindows="true"
+                    android:padding="2dip"
+                    app:activeColor="#ff0000"
+                    app:activeType="fill"
+                    app:circleSeparation="20dip"
+                    app:inactiveColor="#ffffff"
+                    app:inactiveType="fill"
+                    app:radius="4dip" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="28dp"
+                    android:background="@drawable/home_edit_bg">
+
+                    <EditText
+                        android:id="@+id/cargo_home_search_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/please_enter_search_num"
+                        android:maxLength="6"
+                        android:textColor="#ffffff"
+                        android:textColorHint="@color/color_ffffff"
+                        android:textCursorDrawable="@drawable/edit_curor"
+                        android:textSize="@dimen/dimen_13" />
+
+                </LinearLayout>
+
+
+                    <cn.bingoogolapple.badgeview.BGABadgeImageView
+                        android:id="@+id/message_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:layout_gravity="center"
+                        android:src="@drawable/messg"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/yewu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <com.cvnavi.logistics.i51ehang.app.widget.gridview.MyGridView
+                android:id="@+id/cargo_menu_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:visibility="gone"
+                android:horizontalSpacing="@dimen/dimen_10"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:verticalSpacing="@dimen/dimen_10" />
+
+            <include layout="@layout/cargo_home_graidview_style" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--</com.handmark.pulltorefresh.library.PullToRefreshScrollView>-->
+
+</LinearLayout>

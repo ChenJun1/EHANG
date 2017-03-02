@@ -1,0 +1,428 @@
+<resources>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="test_str">测试</string>
+
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="LOADING">Loading...</string>
+    <string name="please_enter_search_num">请输入查询码</string>
+    <string name="app_name">e航</string>
+
+    <string name="signal_interrput_ask">为什么信号会出现中断？</string>
+    <string name="signal_interrput_answer">如果出现信号中断，就是gps没法往外发送信号了。可能是您的车到了没电话信号的地方，gps无法回传数据也可能是gps的电源松动导致gps设备没电了</string>
+
+
+    <!--=========================================司机============================================-->
+    <string name="driver_home_name">首页</string>
+    <string name="driver_addressbook_name">通讯录</string>
+    <string name="driver_me_name">我的</string>
+
+    <string name="driver_home_yingshoukuan">应收款</string>
+    <string name="driver_home_trans_edit_car_scheduling_save">确认保存</string>
+
+
+    <!-- 货单详情  -->
+    <string name="driver_home_order_detail_yiqianshou">已签收</string>
+    <string name="driver_home_order_detail_weiqianshou">未签收</string>
+    <string name="driver_home_order_detail_weipeisong">未配送</string>
+    <string name="driver_home_order_detail_sure_sign">确认签收</string>
+    <string name="driver_home_order_detail_exception_take_photo">异常上报</string>
+    <string name="driver_home_order_detail_exception_info">异常信息</string>
+
+    <!--编辑司机-->
+    <string name="edit_driver_info_driver_name">司机姓名</string>
+    <string name="edit_driver_info_driver_tel_photo_num">司机电话</string>
+    <string name="edit_driver_info_driver_license_type">驾照类型</string>
+    <string name="edit_driver_info_driver_id_num">身份证号</string>
+    <string name="edit_driver_info_driver_save">保  存</string>
+    <string name="add_driver_info_hint_enter_id_num">请输入身份证号码</string>
+    <string name="add_driver_info_save">确&#160;&#160;认</string>
+
+    <!--添加司机车辆排班-->
+    <string name="add_car_scheduling">新建发车计划</string>
+    <string name="edit_car_scheduling">编辑车辆排班</string>
+    <string name="add_car_scheduling_car">车辆</string>
+    <string name="add_car_scheduling_car_main">主驾：</string>
+    <string name="add_car_scheduling_car_not_main">副驾：</string>
+    <string name="add_car_scheduling_car_route">线路：</string>
+    <string name="add_car_scheduling_date">排班日期</string>
+    <string name="add_car_scheduling_pre_time">预发车时间</string>
+    <string name="add_car_scheduling_tel_photo_num">联系电话</string>
+    <string name="add_car_scheduling_choose_car">请选择车辆</string>
+    <string name="add_car_scheduling_choose_car_main">请选择主驾驶</string>
+    <string name="add_car_scheduling_choose_car_not_main">选择副驾驶</string>
+    <string name="add_car_scheduling_enter_tel_photo_num">请输入联系电话</string>
+    <string name="add_car_scheduling_choose_route">选择路线</string>
+    <string name="add_car_scheduling_choose_scheduling_date">选择排班日期</string>
+    <string name="add_car_scheduling_choose_pre_send_car_date">选择预发车时间</string>
+    <string name="add_car_scheduling_enter_note">请输入备注信息</string>
+    <string name="add_car_scheduling_sure">确认添加</string>
+    <string name="edit_car_scheduling_sure">确认编辑</string>
+    <string name="car_scheduling_last_day">昨天排班</string>
+    <string name="car_scheduling_today">今天排班</string>
+    <string name="car_scheduling_tomorrow">明天排班</string>
+    <string name="car_scheduling_search">搜索</string>
+    <string name="car_scheduling_begin_time">开始日期</string>
+    <string name="car_scheduling_end_time">结束日期</string>
+    <string name="car_scheduling_search_more_than_30">查询日期不能大于30天！</string>
+    <string name="car_scheduling_search_more_than_90">查询日期不能大于90天！</string>
+    <string name="car_scheduling_search_star_more_than_end">开始日期应小于结束日期！</string>
+
+
+    <!--司机管理-->
+    <string name="driver_manager">司机管理</string>
+
+    <!--选择线路-->
+    <string name="choice_line">选择线路</string>
+    <!--线路类型-->
+    <string name="line_type_1">干线</string>
+    <string name="line_type_2">支线</string>
+
+    <!--选择司机-->
+    <string name="choice_driver">选择司机</string>
+    <!--=========================================end=============================================-->
+
+
+    <!--=========================================货主============================================-->
+    <string name="cargo_home_name">首页</string>
+    <string name="cargo_addressbook_name">上门取货</string>
+    <string name="cargo_me_name">我的</string>
+
+    <string name="my_is_cargo_name">我是货主</string>
+    <string name="lately_unfinished_order_name">最近未完成的货单</string>
+    <string name="unfinished_no_start_car">未发车</string>
+    <string name="unfinished_in_transit">运输中</string>
+    <string name="unfinished_delivery">配送中</string>
+
+    <string name="cargo_pickup_goodNum">件数</string>
+    <string name="cargo_pickup_goodWeight">重量</string>
+    <string name="cargo_pickup_goodVolume">体积</string>
+
+    <string name="cargo_pickup_kg">kg</string>
+    <string name="cargo_pickup_m">m³</string>
+    <string name="cargo_pickup_num">件</string>
+    <string name="cargo_pickup_prompt">*件数/体积/重量 至少选填一个</string>
+    <string name="cargo_pickup_confirm">确认发货</string>
+    <string name="cargo_pickup_address">取货地址</string>
+
+    <string name="cargo_pickup_productName">物品名称</string>
+    <string name="cargo_pickup_productName_parts">配件</string>
+    <string name="cargo_pickup_productName_Clothes">服饰</string>
+    <string name="cargo_pickup_productName_food">食品</string>
+    <string name="cargo_pickup_productName_liquid">液体</string>
+    <string name="cargo_pickup_productName_other">其他</string>
+
+    <string name="cargo_pickup_spec">物品规格</string>
+    <string name="cargo_pickup_spec_carton">纸箱</string>
+    <string name="cargo_pickup_spec_Tray">托盘</string>
+    <string name="cargo_pickup_spec_WoodenBox">木箱</string>
+    <string name="cargo_pickup_spec_WovenBag">编织袋</string>
+    <string name="cargo_pickup_spec_other">无包装</string>
+
+    <string name="cargo_pickup_search">请输入品名</string>
+    <string name="cargo_map_search">请输入地址</string>
+
+
+    //设置消息通知
+    <string name="cargo_set_Loading_notice">装车通知</string>
+    <string name="cargo_set_Departure_notice">发车通知</string>
+    <string name="cargo_set_Arrive_notice">到车通知</string>
+    <string name="cargo_set_Delivery_notice">送货通知</string>
+    <string name="cargo_set_Sign_notice">签收通知</string>
+    <string name="cargo_set_Save_settings">保存设置</string>
+    <string name="cargo_set_Save_settings_succ">设置成功</string>
+
+    <string name="please_enter_search_name">请输入品名</string>
+
+
+    //消息中心
+    <string name="cargo_msg_Driver">司机：</string>
+    <string name="cargo_msg_CarCode">车牌号：</string>
+    <string name="cargo_msg_Tel">电话：</string>
+    <string name="cargo_msg_Order_No">货单号：</string>
+    <string name="cargo_msg_details">查看详情</string>
+
+
+    <!--=========================================end=============================================-->
+
+
+    <!--=========================================员工============================================-->
+    <string name="employee_home_name">首页</string>
+    <string name="employee_addressbook_name">通讯录</string>
+    <string name="employee_me_name">我的</string>
+    <string name="please_enter_search_content">请输入搜索内容</string>
+    <string name="customer_service_tel_num">4001008256</string>
+
+    <!--=========================================end=============================================-->
+
+
+    <!--=========================================公用============================================-->
+    <string name="login_phone_num_hint_name">请输入手机号</string>
+    <string name="login_pwd_hint_name">请输入验证码</string>
+    <string name="get_verify_code_name">获取验证码</string>
+
+    <string name="confirm_name">确定</string>
+    <string name="confirm_login">登  录</string>
+
+    <string name="not_null_name">必填</string>
+    <string name="choice_data">请选择日期</string>
+
+
+    <string name="car_code_name">车牌号</string>
+    <string name="car_type_name">车辆类型</string>
+    <string name="container_size_name">货箱规格</string>
+    <string name="carry_name">核载</string>
+    <string name="gps_equipment_code_name">GPS设备号</string>
+    <string name="kg_name">KG</string>
+
+    <string name="confirm_empty_name">确\t\t认</string>
+
+    <string name="please_input_name">请输入</string>
+    <string name="please_input_gps_number_name">请输入GPS号</string>
+
+    <string name="search_name">搜索</string>
+    <string name="loging">登录中</string>
+
+
+    <!--确认签收-->
+    <string name="sign_total_money">应收款</string>
+    <string name="sign_time">签收时间</string>
+    <string name="sign_person_name">签收人</string>
+    <string name="sign_photos">签收照片</string>
+    <string name="sign_sure">确认签收</string>
+    <string name="sign_top_contact">常用签收人</string>
+    <string name="sign_num">任务编号</string>
+    <string name="sign_jian_shu">签收件数</string>
+
+
+    <!--应付款列表-->
+    <string name="accounts_payable_list_total">总计:</string>
+    <string name="accounts_payable_list_already_paid">已付款:</string>
+    <string name="accounts_payable_list_no_payment">未付款:</string>
+    <string name="accounts_payable_list_already_receive">已收款:</string>
+    <string name="accounts_payable_list_no_receive">未收款:</string>
+    <string name="accounts_payable_list_yuan">元</string>
+    <string name="accounts_payable_list_order_num">货单号:</string>
+    <string name="accounts_payable_list_shuttle_bus_cost">班车成本</string>
+    <string name="accounts_payable_list_delivery_cost">提货成本</string>
+    <string name="accounts_payable_list_send_cost">送货成本</string>
+    <string name="accounts_payable_last_day">最近一天</string>
+    <string name="accounts_payable_last_three_days">最近三天</string>
+    <string name="accounts_payable_last_month">最近一月</string>
+    <string name="accounts_payabl_main_total">应付款合计：</string>
+    <string name="accounts_receiveabl_main_total">应收款合计：</string>
+    <string name="carrying_cost">承运成本</string>
+    <string name="lready_expense">已支出</string>
+    <string name="not_expense">未支出</string>
+    <string name="accounts_receiveable_list_">票面收入</string>
+    <string name="accounts_receiveable_list_already_receive">已收款</string>
+    <string name="accounts_receiveable_list_no_receive">未收款</string>
+    <!--历史轨迹-->
+    <string name="historical_track_analysis">记录分析</string>
+    <string name="historical_track_detail">详情记录</string>
+    <string name="historical_track_drive">行驶</string>
+    <string name="historical_track_stop_car">停车</string>
+    <string name="historical_track_min">分钟</string>
+    <string name="historical_track_v">km/h</string>
+    <string name="historical_track_last_day">最近一天</string>
+    <string name="historical_track_last_three_day">最近三天</string>
+    <string name="historical_track_statistics_time">统计时间</string>
+    <string name="historical_track_to">至</string>
+    <string name="historical_track_choose">请选择车辆</string>
+    <string name="historical_track_car_license_num">车&#160;牌&#160;号</string>
+    <string name="historical_track_query">查&#160;&#160;&#160;询</string>
+
+
+    <!--拍照记事-->
+    <string name="up_load_photo">拍照记事...</string>
+    <string name="up_load_select">拍照类型</string>
+    <string name="up_load_exception_select">异常类型</string>
+    <string name="import_select">请输入记事......</string>
+
+    <!--我的货单-->
+    <string name="my_order_order_num">单号:</string>
+    <string name="my_order_origi_place">始发地:</string>
+    <string name="my_order_to_place">到达地:</string>
+    <string name="my_order_product_name">品名:</string>
+    <string name="my_order_send_order_time">发货时间:</string>
+    <string name="scan_text">将标签放入框内</string>
+    <string name="my_order_has_sign">已签收</string>
+    <string name="my_order_all">全部</string>
+    <string name="my_order_kg">%1$skg</string>
+    <string name="my_order_m">%1$sm³</string>
+    <string name="my_order_jian">%1$s件</string>
+    <string name="my_history_num">历史记录（最近%1$d条记录）</string>
+
+    <string name="logistics_follow">物流跟踪</string>
+
+    <!--配载清单列表-->
+    <string name="stowage_list_item_income">收入</string>
+    <string name="stowage_list_item_cost">成本</string>
+    <string name="stowage_list_item_profit">利润</string>
+    <string name="stowage_list_item_size">票数</string>
+    <string name="stowage_list_item_gua">挂</string>
+
+    <!--统计-->
+    <string name="statistic_total_size">总货单量/票</string>
+    <string name="statistic_total_num">总件数/件</string>
+    <string name="statistic_total_income">总收入/元</string>
+    <string name="statistic_invalid">作废货单/票</string>
+    <string name="statistic_total_weight">总重量/kg</string>
+    <string name="statistic_total_volume">总体积/m³</string>
+    <string name="statistic_sum_send_car">合计发车(车)</string>
+    <string name="statistic_sum_cost">合计成本(元)</string>
+    <string name="statistic_sum_income">合计收入(元)</string>
+    <string name="statistic_sum_profit">合计利润(元)</string>
+    <string name="statistic_vehicle">整车发车(车)</string>
+    <string name="statistic_with_the_car">配货发车(车)</string>
+    <string name="total_mile">%1$skm</string>
+    <string name="total_mile_km">%1$skm</string>
+    <string name="statistic_order_list_goods">物品:</string>
+    <string name="statistic_order_list_income">收入:</string>
+
+    <!--登陆界面-->
+    <string name="get_verifycode_faild">获取验证码失败</string>
+    <string name="get_verifycode_succ">验证码已发出，注意查收!</string>
+    <string name="login_succ">登录成功！</string>
+    <string name="login_fail">登录失败！</string>
+    <string name="exit_login_fail">退出登录失败！</string>
+
+    <string name="get_data_fail">获取数据失败！</string>
+    <string name="scheduling_list">发车计划</string>
+    <string name="list_null">数据为空！</string>
+    <string name="mile_list_null">未查询到任何里程信息</string>
+    <string name="mile_list_error">查询失败!</string>
+    <string name="search_data_not_allow_null">搜索日期不能为空</string>
+    <string name="check_data_empty">暂无数据！</string>
+
+
+    <!--=========================================end=============================================-->
+
+
+    <!--=========================================提示============================================-->
+    <string name="input_phone_num_hint">请输入手机号！</string>
+    <string name="input_right_phone_num_hint">请输入正确的手机号！</string>
+    <string name="input_pwd_or_vefiry_code_hint">请输入密码或验证码！</string>
+
+    <string name="add_succ">添加成功！</string>
+    <string name="add_fail">添加失败！</string>
+
+    <string name="edit_succ">编辑成功！</string>
+    <string name="edit_fail">编辑失败！</string>
+
+    <string name="search_succ">查询成功！</string>
+    <string name="search_fail">查询失败！</string>
+
+    <string name="schedule_date_before_cur_date">排班日期必须大于等于当天！</string>
+    <string name="schedule_date_after_cur_date_for_2">排班日期不能大于当前日期2天！</string>
+    <string name="pre_time_after_today">预发车时间要大于当前时间！</string>
+    <!--=========================================end=============================================-->
+
+
+    <!--=========================================dialog==========================================-->
+    <string name="dia_prompt_str">提示</string>
+    <string name="dia_msg_str">消息</string>
+    <string name="dia_ok_str">确定</string>
+    <string name="dia_cancel_str">取消</string>
+    <string name="dia_back_str">返回</string>
+    <string name="dia_yes_str">是</string>
+    <string name="dia_no_str">否</string>
+    <string name="dia_no_prompt_str">不再提示</string>
+    <string name="dia_i_know">我知道了</string>
+    <string name="dia_warm_prompt">温馨提示</string>
+    <!--=========================================end=============================================-->
+
+
+    <!--=========================================emptylayout=====================================-->
+    <string name="el_empty_message">暂无数据！</string>
+    <string name="el_loading_message">加载中</string>
+    <string name="el_error_message">请求服务错误！</string>
+
+    <string name="el_empty_button">重新加载</string>
+    <string name="el_loading_button">取消加载</string>
+    <string name="el_error_button">重新加载</string>
+    <!--=========================================end=============================================-->
+
+    <!--======================================单车监控界面============================-->
+    <string name="toast_tis">请选择车辆</string>
+    <string name="car_control">单车监控</string>
+    <string name="map">地图</string>
+    <string name="car_list">车辆列表</string>
+    <string name="on_line">在线</string>
+    <string name="off_line">离线</string>
+    <string name="send_car_time">发车时间</string>
+    <string name="reach_car_time">到车时间</string>
+    <string name="leave_time">离开时间</string>
+    <string name="error_null_loc">无定位信息</string>
+
+
+    <!--=========================-========网络请求提示-==========================================-->
+    <string name="request_error">网络异常，请稍后再试！</string>
+    <string name="request_Fill">请求失败，请稍后再试！</string>
+    <string name="dele_succ">删除成功！</string>
+
+    <!--=============================更新APP提示============================-->
+    <!--=============================司机管理============================-->
+    <string name="driver_add">添加司机</string>
+    <string name="driver_edit">编辑司机</string>
+
+
+    <!-- 图片浏览 -->
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string>
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="back">返回</string>
+
+    <!--========================我的任务=======================================-->
+    <string name="my_task">我的任务</string>
+    <string name="off_the_stocks">已完成</string>
+    <string name="total">全部</string>
+    <string name="order_detailed">派车任务详情</string>
+    <string name="carry_detailed">配载任务详情</string>
+    <string name="line_follow">跟踪</string>
+    <string name="look">查看</string>
+    <string name="look_pic">查看照片</string>
+    <string name="exception">异常</string>
+    <string name="confirm_car">确认到车</string>
+    <string name="confirm_pick_up_goods">确认提货</string>
+    <string name="choices_note">节点选择</string>
+    <string name="success_confirm">成功确认！</string>
+    <string name="exception_info">异常信息</string>
+    <string name="add_exception_info">添加</string>
+
+    <!--========================我的车队=======================================-->
+    <string name="in_transit">在途中</string>
+    <string name="day_alarm">当日报警</string>
+    <string name="mileage_statistics">里程统计</string>
+    <string name="Track_view">轨迹查看</string>
+    <string name="question">遇到问题？点击</string>
+    <string name="contact_us">联系我们</string>
+    <string name="i_know">我知道了</string>
+    <string name="total_over_time">超速总时间:</string>
+    <string name="fleet_monitor">车队监控</string>
+    <string name="fleet_chooce_list">筛选</string>
+    <string name="not_monitor_info">暂无监控信息！</string>
+    <string name="get_car_info_fill">获取车辆信息失败！</string>
+    <string name="customer_tel_num">4001008256</string>
+
+
+    //关于我们
+    <!--<string name="about_us">e航是一款物流平台终端，旨在为广大物流企业实现物流信息化平台提供最优的解决方案!</string>-->
+    <string name="about_us">e航由上海势航网络科技有限公司负责开发和运营的一款物流平台终端，旨在为广大物流企业实现物流信息化平台提供最优的解决方案!</string>
+    <string name="copy_right_receive">上海势航网络有限公司 版权所有</string>
+
+</resources>

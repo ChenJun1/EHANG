@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginLeft="@dimen/dimen_18">
+
+        <ImageView
+            android:id="@+id/progress_state_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrived" />
+
+        <View
+            android:id="@+id/progress_v"
+            android:layout_width="@dimen/dimen_2"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/progress_state_iv"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:background="@color/color_71B2EE" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dimen_29"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateTime_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="--dadadada"
+                    android:textColor="@color/color_71B2EE"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/exception_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/color_71B2EE"
+                    android:text="adasdadadas" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pic_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/pic_tv"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_30"
+            android:background="@drawable/setbar_tv_lookpic"
+            android:gravity="center"
+            android:text="@string/look"
+            android:textColor="@drawable/tv_look_pic_font_style"
+            android:textSize="@dimen/font_15" />
+    </LinearLayout>
+
+</LinearLayout>

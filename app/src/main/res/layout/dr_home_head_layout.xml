@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_ll"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#00FFFFFF"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_25">
+
+    <LinearLayout
+        android:id="@+id/bg_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dimen_5">
+
+        <ImageView
+            android:id="@+id/scan_QR_img"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_top_bar_scanning" />
+
+        <LinearLayout
+            android:id="@+id/back_llayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_5"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_weight="10"
+            android:background="@drawable/home_edit_bg">
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:src="@drawable/home_top_bar_search" />
+
+            <EditText
+                android:id="@+id/scanning_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:focusableInTouchMode="false"
+                android:hint="@string/please_enter_search_num"
+                android:maxLength="6"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/color_ffffff"
+                android:textCursorDrawable="@drawable/edit_curor"
+                android:textSize="@dimen/dimen_13" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_ll"
+            android:layout_marginLeft="10dp"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/messg"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dimen_17"
+                android:visibility="visible" />
+
+            <com.cvnavi.logistics.i51ehang.app.widget.bannerview.CircleFlowIndicator
+                android:id="@+id/badeView"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:activeColor="#ff0000"
+                android:layout_marginLeft="@dimen/dimen_16"
+                app:activeType="fill"
+                app:circleSeparation="20dip"
+                app:inactiveType="fill"
+                app:radius="4dip"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

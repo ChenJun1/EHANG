@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg">
+    <com.cvnavi.logistics.i51ehang.app.widget.viewpage.NoScrollViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen_50"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/cargo_home_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/cargo_main_bottom_style">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e3e2e2"/>
+
+            <TextView
+                android:id="@+id/cargo_home_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="首页"
+                android:textColor="#717171"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cargo_sm_layout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/cargo_main_center_style">
+
+            <TextView
+                android:id="@+id/cargo_sm_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="上门取货"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cargo_me_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/cargo_main_bottom_style">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e3e2e2"/>
+            <TextView
+                android:id="@+id/cargo_me_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我"
+                android:textColor="#717171"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--<FrameLayout-->
+        <!--android:id="@+id/container_flayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#00ffffff"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginBottom="50dp"/>-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/menu_llayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:background="@null"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="#e3e2e2" />-->
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/radiogroup"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:background="#352E36"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--&lt;!&ndash; 首页 &ndash;&gt;-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/homepage_rb"-->
+                <!--style="@style/main_tab_bottom"-->
+                <!--android:drawableTop="@drawable/selector_main_navi_icon_home"-->
+                <!--android:text="@string/cargo_home_name"-->
+                <!--android:textColor="@color/selector_color_main_navi_txt" />-->
+            <!--&lt;!&ndash; 通讯录 &ndash;&gt;-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/addressbook_rb"-->
+                <!--style="@style/main_tab_bottom"-->
+                <!--android:drawableTop="@drawable/selector_main_navi_icon_addressbook"-->
+                <!--android:text="@string/cargo_addressbook_name"-->
+                <!--android:textColor="@color/selector_color_main_navi_txt" />-->
+            <!--&lt;!&ndash; 我的 &ndash;&gt;-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/me_rb"-->
+                <!--style="@style/main_tab_bottom"-->
+                <!--android:drawableTop="@drawable/selector_main_navi_icon_me"-->
+                <!--android:text="@string/cargo_me_name"-->
+                <!--android:textColor="@color/selector_color_main_navi_txt" />-->
+        <!--</RadioGroup>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/cargo_home_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#fafafa">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/cargo_home_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="首页"-->
+                <!--android:textColor="#717171"-->
+                <!--android:textSize="15sp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/cargo_sm_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="65dp"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#FEA128">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/cargo_sm_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="上门取货"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="18sp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/cargo_me_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#fafafa">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/cargo_me_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="我"-->
+                <!--android:textColor="#717171"-->
+                <!--android:textSize="15sp" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>

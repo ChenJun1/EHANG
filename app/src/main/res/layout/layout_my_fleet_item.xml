@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/root_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_12"
+        android:paddingLeft="@dimen/dimen_13"
+        android:paddingRight="@dimen/dimen_13"
+        android:paddingTop="@dimen/dimen_12">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/carCode_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="沪A123123"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_16"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:visibility="invisible">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公里"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8">
+
+
+            <LinearLayout
+                android:id="@+id/location_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/locatin_iv"
+                    android:layout_width="@dimen/dimen_15"
+                    android:layout_height="@dimen/dimen_20"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/location_blue"
+                    />
+
+                <TextView
+                    android:id="@+id/location_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:text="上海市"
+                    android:textColor="@color/color_000000"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/jigou_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_ll"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_org"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:text="所属机构："
+                    android:layout_alignBottom="@+id/ll_state"
+                    android:textColor="@color/color_000000"/>
+
+                <TextView
+                    android:id="@+id/org_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_toRightOf="@+id/tv_org"
+                    android:text="上海市"
+                    android:layout_alignBottom="@+id/ll_state"
+                    android:textColor="@color/color_000000" />
+
+                <LinearLayout
+                    android:id="@+id/ll_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/arm_iv"
+                        android:layout_width="@dimen/dimen_24"
+                        android:layout_height="@dimen/dimen_24"
+                        android:src="@drawable/info"
+                        android:visibility="invisible"/>
+
+
+                    <TextView
+                        android:id="@+id/state_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:background="@drawable/shape_fleet_jing"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_6"
+                        android:paddingLeft="@dimen/dimen_12"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_6"
+                        android:text="停车中"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="@dimen/font_15"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="#E6E6E6"></View>
+
+
+</LinearLayout>
